@@ -1,0 +1,27 @@
+﻿using GalaSoft.MvvmLight.Command;
+using System;
+using System.Diagnostics;
+using System.Linq;
+using System.Windows.Input;
+using System.Windows.Media.Imaging;
+
+namespace ConfuserEx.ViewModel
+{
+    internal class AboutTabVM : TabViewModel
+    {
+        public AboutTabVM(AppVM app)
+            : base(app, "关于")
+        {
+            var decoder = new IconBitmapDecoder(new Uri("pack://application:,,,/ConfuserEx.ico"), BitmapCreateOptions.DelayCreation, BitmapCacheOption.OnDemand);
+
+            Icon = decoder.Frames.First(frame => frame.Width == 64);
+        }
+
+        public ICommand LaunchBrowser
+        {
+            get { return new RelayCommand<string>(site => Process.Start(site)); }
+        }
+
+        public BitmapSource Icon { get; private set; }
+    }
+}
