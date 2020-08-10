@@ -74,7 +74,7 @@ namespace ConfuserEx.ViewModel
                 return new RelayCommand(() =>
                 {
                     var ofd = new VistaOpenFileDialog();
-                    ofd.Filter = ".NET assemblies (*.exe, *.dll)|*.exe;*.dll|All Files (*.*)|*.*";
+                    ofd.Filter = ".NET 程序集 (*.exe, *.dll)|*.exe;*.dll|All Files (*.*)|*.*";
                     ofd.Multiselect = true;
                     if (ofd.ShowDialog() ?? false)
                     {

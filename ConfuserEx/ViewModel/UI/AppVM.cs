@@ -100,7 +100,7 @@ namespace ConfuserEx.ViewModel
             {
                 var sfd = new VistaSaveFileDialog();
                 sfd.FileName = FileName;
-                sfd.Filter = "ConfuserEx Projects (*.crproj)|*.crproj|All Files (*.*)|*.*";
+                sfd.Filter = "ConfuserEx 工程 (*.crproj)|*.crproj|All Files (*.*)|*.*";
                 sfd.DefaultExt = ".crproj";
                 sfd.AddExtension = true;
                 if (!(sfd.ShowDialog(Application.Current.MainWindow) ?? false) || sfd.FileName == null)
@@ -145,7 +145,7 @@ namespace ConfuserEx.ViewModel
                 return;
 
             var ofd = new VistaOpenFileDialog();
-            ofd.Filter = "ConfuserEx Projects (*.crproj)|*.crproj|All Files (*.*)|*.*";
+            ofd.Filter = "ConfuserEx 工程 (*.crproj)|*.crproj|All Files (*.*)|*.*";
             if ((ofd.ShowDialog(Application.Current.MainWindow) ?? false) && ofd.FileName != null)
             {
                 string fileName = ofd.FileName;

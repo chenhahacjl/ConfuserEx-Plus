@@ -276,7 +276,7 @@ namespace Confuser.Core
                 settings.AppendFormat("preset({0});", rule.Preset.ToString().ToLowerInvariant());
             foreach (var item in rule)
             {
-                settings.Append(item.Action == SettingItemAction.Add ? '+' : '-');
+                settings.Append(item.Action == SettingItemAction.添加 ? '+' : '-');
                 settings.Append(item.Id);
                 if (item.Count > 0)
                 {

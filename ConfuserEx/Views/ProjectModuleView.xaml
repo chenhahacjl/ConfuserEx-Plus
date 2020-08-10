@@ -17,13 +17,13 @@
             <ColumnDefinition Width="35px" />
         </Grid.ColumnDefinitions>
 
-        <Label Content="Assembly Path : " Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Right"
+        <Label Content="程序集路径: " Grid.Row="0" Grid.Column="0" HorizontalContentAlignment="Right"
                VerticalContentAlignment="Center" />
         <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Margin="5" VerticalContentAlignment="Center"
                  Text="{Binding Path, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                  local:FileDragDrop.Command="{x:Static local:FileDragDrop.FileCmd}" />
 
-        <Label Content="SN Key Path : " Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Right"
+        <Label Content="SN Key 路径 : " Grid.Row="1" Grid.Column="0" HorizontalContentAlignment="Right"
                VerticalContentAlignment="Center" />
         <TextBox x:Name="PathBox" Grid.Row="1" Grid.Column="1" Margin="5" VerticalContentAlignment="Center"
                  TextChanged="PathBox_TextChanged"
@@ -34,13 +34,13 @@
                        TextOptions.TextRenderingMode="GrayScale" />
         </Button>
 
-        <Label Content="SN Key Password : " Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Right"
+        <Label Content="SN Key 密码 : " Grid.Row="2" Grid.Column="0" HorizontalContentAlignment="Right"
                VerticalContentAlignment="Center" />
         <TextBox x:Name="PwdBox" Grid.Row="2" Grid.Column="1" Margin="5" Grid.ColumnSpan="2"
                  VerticalContentAlignment="Center"
                  Text="{Binding SNKeyPassword, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
 
-        <Button Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Right" Content="Done"
+        <Button Grid.Row="3" Grid.ColumnSpan="3" HorizontalAlignment="Right" Content="确定"
                 Width="70" Margin="5" Click="Done" />
     </Grid>
 </Window>

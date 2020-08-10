@@ -71,7 +71,7 @@ namespace Confuser.Core
                 rule.Add(new SettingItem<Protection>
                 {
                     Id = prot.Id,
-                    Action = SettingItemAction.Add
+                    Action = SettingItemAction.添加
                 });
                 proj.Rules.Add(rule);
                 discovery = new PackerDiscovery(prot);

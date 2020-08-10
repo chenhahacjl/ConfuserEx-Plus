@@ -8,17 +8,17 @@ namespace Confuser.Protections
 {
     internal class LocaltoFieldProtection : Protection
     {
-        public const string _Id = "local to field";
+        public const string _Id = "本地变量保护";
         public const string _FullId = "Ki.Local2Field";
 
         public override string Name
         {
-            get { return "local to field Protection"; }
+            get { return "本地变量保护（local to field）"; }
         }
 
         public override string Description
         {
-            get { return "This protection marks the module with a attribute that discourage ILDasm from disassembling it."; }
+            get { return "此保护在模块中添加阻止ILDasm反汇编的标记。"; }
         }
 
         public override string Id

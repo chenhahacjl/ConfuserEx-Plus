@@ -185,12 +185,12 @@ namespace Confuser.Core.Project
         /// <summary>
         ///     Add the protection to the active protections
         /// </summary>
-        Add,
+        添加,
 
         /// <summary>
         ///     Remove the protection from the active protections
         /// </summary>
-        Remove
+        移除
     }
 
     /// <summary>
@@ -204,7 +204,7 @@ namespace Confuser.Core.Project
         /// </summary>
         /// <param name="id">The protection id</param>
         /// <param name="action">The action to take</param>
-        public SettingItem(string id = null, SettingItemAction action = SettingItemAction.Add)
+        public SettingItem(string id = null, SettingItemAction action = SettingItemAction.添加)
         {
             Id = id;
             Action = action;
@@ -236,7 +236,7 @@ namespace Confuser.Core.Project
             idAttr.Value = Id;
             elem.Attributes.Append(idAttr);
 
-            if (Action != SettingItemAction.Add)
+            if (Action != SettingItemAction.添加)
             {
                 XmlAttribute pAttr = xmlDoc.CreateAttribute("action");
                 pAttr.Value = Action.ToString().ToLower();
@@ -271,7 +271,7 @@ namespace Confuser.Core.Project
             if (elem.Attributes["action"] != null)
                 Action = (SettingItemAction)Enum.Parse(typeof(SettingItemAction), elem.Attributes["action"].Value, true);
             else
-                Action = SettingItemAction.Add;
+                Action = SettingItemAction.添加;
 
             Clear();
             foreach (XmlElement i in elem.ChildNodes.OfType<XmlElement>())

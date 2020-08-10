@@ -54,6 +54,14 @@ namespace ConfuserEx.ViewModel
         {
             var parameters = new ConfuserParameters();
             parameters.Project = ((IViewModel<ConfuserProject>)App.Project).Model;
+
+            if (parameters.Project.Count == 0)
+            {
+                documentContent.Inlines.Clear();
+                AppendLine("[ERROR] {0}", Brushes.Red, "未配置需要保护的程序集！");
+                return;
+            }
+
             if (File.Exists(App.FileName))
                 Environment.CurrentDirectory = Path.GetDirectoryName(App.FileName);
             parameters.Logger = this;

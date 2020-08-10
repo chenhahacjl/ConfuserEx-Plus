@@ -4,8 +4,8 @@
 
     <xs:simpleType name="action">
         <xs:restriction base="xs:string">
-            <xs:enumeration value="add" />
-            <xs:enumeration value="remove" />
+            <xs:enumeration value="添加" />
+            <xs:enumeration value="移除" />
         </xs:restriction>
     </xs:simpleType>
 
@@ -29,7 +29,7 @@
             <xs:element name="argument" type="argument" minOccurs="0" maxOccurs="unbounded" />
         </xs:sequence>
         <xs:attribute name="id" type="xs:string" use="required" />
-        <xs:attribute name="action" type="action" default="add" />
+        <xs:attribute name="action" type="action" default="添加" />
     </xs:complexType>
 
     <xs:complexType name="rule">

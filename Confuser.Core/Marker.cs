@@ -232,7 +232,7 @@ namespace Confuser.Core
                 FillPreset(i.Key.Preset, ret);
                 foreach (var prot in i.Key)
                 {
-                    if (prot.Action == SettingItemAction.Add)
+                    if (prot.Action == SettingItemAction.添加)
                         ret[protections[prot.Id]] = new Dictionary<string, string>(prot, StringComparer.OrdinalIgnoreCase);
                     else
                         ret.Remove(protections[prot.Id]);
